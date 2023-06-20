@@ -8,19 +8,20 @@ import java.util.List;
 
 public class FileReaderEntry {
     private String palavrasFileUnique;
+    private static String father= "src/files/";
     private static String[] palavrasFiles = {
-            "src/files/palavras_100k.txt",
-            "src/files/palavras_200k.txt",
-            "src/files/palavras_300k.txt",
-            "src/files/palavras_400k.txt",
-            "src/files/palavras_500k.txt",
-            "src/files/palavras_600k.txt",
-            "src/files/palavras_700k.txt"
+            "palavras_100k.txt",
+            "palavras_200k.txt",
+            "palavras_300k.txt",
+            "palavras_400k.txt",
+            "palavras_500k.txt",
+            "palavras_600k.txt",
+            "palavras_700k.txt"
     }; // Nomes dos arquivos de corpus
 
     public FileReaderEntry(String palavrasFileUnique) 
     {
-        this.palavrasFileUnique = palavrasFileUnique;
+        this.palavrasFileUnique = FileReaderEntry.father + palavrasFileUnique;
     }
 
     public static String[] getPalavrasFiles(){
